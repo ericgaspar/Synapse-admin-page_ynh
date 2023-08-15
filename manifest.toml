@@ -32,6 +32,14 @@ ram.runtime = "50M"
     type = "path"
     default = "/admin"
 
+    [install.synapse_app]
+    ask.en = "Input the Synapse app ID you wish to connect to."
+    ask.fr = "Entrez l'ID de l'app Synapse à laquelle vous souhaitez vous connecter."
+    help.en = "Leave the default value if you have only one Synapse server installed."
+    help.fr = "Laissez la valeur par défaut si vous n'avez installé qu'un seul serveur Synapse."
+    type = "string"
+    default = "synapse"
+
     [install.init_main_permission]
     type = "group"
     default = "visitors"
