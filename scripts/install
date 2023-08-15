@@ -29,6 +29,9 @@ ynh_script_progression --message="Adding system configurations related to $app..
 # Create a dedicated NGINX config using the conf/nginx.conf template
 ynh_add_nginx_config
 
+# Create NGINX config to access /_synapse/admin endpoint
+ynh_add_config --template="endpoint.nginx.conf" --destination="/etc/nginx/conf.d/${synapse_domain}.d/$app.endpoint.conf"
+
 #=================================================
 # END OF SCRIPT
 #=================================================
