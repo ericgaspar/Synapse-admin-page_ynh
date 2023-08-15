@@ -26,6 +26,7 @@ ynh_backup --src_path="$install_dir"
 #=================================================
 
 ynh_backup --src_path="/etc/nginx/conf.d/$domain.d/$app.conf"
+ynh_backup --src_path="/etc/nginx/conf.d/${synapse_domain}.d/$app.endpoint.conf"
 
 #=================================================
 # END OF SCRIPT
