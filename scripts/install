@@ -10,6 +10,16 @@ source _common.sh
 source /usr/share/yunohost/helpers
 
 #=================================================
+# RETRIEVE ARGUMENTS FROM THE MANIFEST
+#=================================================
+
+synapse_domain=$(ynh_app_setting_get --app=$synapse_app --key=domain)
+synapse_port=$(ynh_app_setting_get --app=$synapse_app --key=synapse_port)
+
+ynh_app_setting_set --app=$app --key=synapse_domain --value=$synapse_domain
+ynh_app_setting_set --app=$app --key=synapse_port --value=$synapse_port
+
+#=================================================
 # APP "BUILD" (DEPLOYING SOURCES, VENV, COMPILING ETC)
 #=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE
